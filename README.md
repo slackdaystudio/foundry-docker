@@ -9,6 +9,7 @@ Make sure these are installed on your server:
 
 1. Docker
 1. docker-compose (https://docs.docker.com/compose/install/)
+1. A valid DNS entry that resolves to your hostname
 
 ## Setup
 Setup is designed to be as straightforward as possible.
