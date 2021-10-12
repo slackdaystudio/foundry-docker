@@ -21,5 +21,7 @@ Setup is designed to be as straightforward as possible.
 1. Execute `sudo docker-compose up --build -d`
 1. Visit `https://<YOUR_DOMAIN>/` to configure your Foundry
 
+**Note:** It may take a few minutes for the server to come online, be patient.
+
 ## PRs Welcome
 Please help make this project better by submitting a PR.
