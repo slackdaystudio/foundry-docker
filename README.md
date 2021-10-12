@@ -9,6 +9,9 @@ Make sure these are installed on your server:
 
 1. Docker
 1. docker-compose (https://docs.docker.com/compose/install/)
+
+In addition make sure you have: 
+
 1. A valid DNS entry that resolves to your hostname
 1. A zipped copy of Foundry
 
