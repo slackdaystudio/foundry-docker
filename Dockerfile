@@ -16,7 +16,7 @@ RUN apt -y update && \
     curl -sL https://deb.nodesource.com/setup_14.x | bash - && \
     apt install -y debian-keyring debian-archive-keyring apt-transport-https nodejs unzip nano nginx certbot
 
-EXPOSE 80 443 30000
+EXPOSE 80 443
 
 ADD ./files/foundryvtt-${FOUNDRY_VERSION}.zip ./files/init.sh ./files/app.conf ./files/options.json /opt/
 
