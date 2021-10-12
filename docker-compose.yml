@@ -1,0 +1,24 @@
+version: "3.7"
+services:
+  foundry:
+    hostname: "${HOSTNAME}"
+    container_name: foundry
+    build: 
+        context: .
+        args:
+            HOSTNAME: "${HOSTNAME}"
+            FOUNDRY_VERSION: "${FOUNDRY_VERSION}"
+    ports:
+      - "80:80"
+      - "443:443"
+      - "30000:30000"
+    volumes:
+      - ./data/certbot/conf:/etc/letsencrypt
+      - ./data/certbot/www:/var/www/certbot
+      - ./data/nginx:/etc/nginx/conf.d
+      - ./data/foundryData:/home/foundry/data
+  certbot:
+    image: certbot/certbot
+    volumes:
+      - ./data/certbot/conf:/etc/letsencrypt
+      - ./data/certbot/www:/var/www/certbot
