@@ -2,6 +2,8 @@
 This project was created to simplify a Foundry deployment with SSL enabled.  Ideally, just change the values
 in `.env` file, drop the zipped foundry file into the `files` folder and do a `sudo docker-compose up --build -d`.
 
+letsencrypt was used to generate valid SSL certificates.
+
 ## Prerequistes
 Make sure these are installed on your server:
 
