@@ -15,7 +15,7 @@ Make sure these are installed on your server:
 Setup is designed to be as straightforward as possible.
 
 1. Drop your zipped Foundry file into the `files` directory
-1. Modify you `.env` file
+1. Modify your `.env` file
 
 ## Installing
 1. Execute `sudo docker-compose up --build -d`
