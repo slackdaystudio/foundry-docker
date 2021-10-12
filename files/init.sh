@@ -3,6 +3,9 @@
 # Create SSL certs
 certbot certonly --non-interactive --agree-tos -m webmaster@${ENV_HOSTNAME} --standalone -d ${ENV_HOSTNAME}
 
+# Setup a cronjob to automatically renew the certs
+(crontab -u $(whoami) -l; echo "0 12 * * * /usr/bin/certbot renew --quiet" ) | crontab -u $(whoami) -
+
 # Install Foundry
 mkdir /home/foundry/foundry && \
 unzip /opt/foundryvtt-${ENV_FOUNDRY_VERSION}.zip -d /home/foundry/foundry && \
