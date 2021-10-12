@@ -14,7 +14,7 @@ RUN apt -y update && \
     adduser --gecos "" --disabled-password --home /home/foundry foundry && \
     usermod -aG sudo foundry && \
     curl -sL https://deb.nodesource.com/setup_14.x | bash - && \
-    apt install -y debian-keyring debian-archive-keyring apt-transport-https nodejs unzip nano nginx certbot
+    apt install -y debian-keyring debian-archive-keyring apt-transport-https nodejs unzip nano nginx certbot cron
 
 EXPOSE 80 443
 
