@@ -8,10 +8,12 @@ services:
         args:
             HOSTNAME: "${HOSTNAME}"
             FOUNDRY_VERSION: "${FOUNDRY_VERSION}"
+            LINUX_USER_PASSWORD: "${LINUX_USER_PASSWORD}"
     ports:
       - "80:80"
       - "443:443"
-      - "30000:30000"
+      # Enable for debugging
+      # - "30000:30000"
     volumes:
       - ./data/certbot/conf:/etc/letsencrypt
       - ./data/certbot/www:/var/www/certbot
