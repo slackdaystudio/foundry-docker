@@ -9,12 +9,12 @@ ARG FOUNDRY_VERSION
 ENV ENV_HOSTNAME=${HOSTNAME}
 ENV ENV_FOUNDRY_VERSION=${FOUNDRY_VERSION}
 
-RUN apt -y update && \
-    apt install -y curl && \
+RUN apt-get -y update && \
+    apt-get install -y curl && \
     adduser --gecos "" --disabled-password --home /home/foundry foundry && \
     usermod -aG sudo foundry && \
     curl -sL https://deb.nodesource.com/setup_14.x | bash - && \
-    apt install -y debian-keyring debian-archive-keyring apt-transport-https nodejs unzip nano nginx certbot cron
+    apt-get install -y debian-keyring debian-archive-keyring apt-transport-https nodejs unzip nano nginx certbot cron
 
 EXPOSE 80 443
 

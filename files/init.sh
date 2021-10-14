@@ -20,8 +20,8 @@ cat /opt/options.json > /home/foundry/data/Config/options.json
 chown -R foundry:foundry /home/foundry/data
 
 # Configure nginx
-cp /opt/app.conf /etc/nginx/sites-available/${HOSTNAME}
-sed -i "s/\${HOSTNAME}/${ENV_HOSTNAME}/g" /etc/nginx/sites-available/${HOSTNAME}
+cp /opt/app.conf /etc/nginx/sites-available/${ENV_HOSTNAME}
+sed -i "s/\${HOSTNAME}/${ENV_HOSTNAME}/g" /etc/nginx/sites-available/${ENV_HOSTNAME}
 ln -s /etc/nginx/sites-available/${HOSTNAME} /etc/nginx/sites-enabled/
 service nginx restart
 
